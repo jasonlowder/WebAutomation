@@ -1,0 +1,26 @@
+﻿using WebAutomationFramework;
+using WebAutomationFramework.Interfaces;
+
+namespace Wellsfargo.Page
+{
+    public class LoginPage : IPage
+    {
+        private const string usernameTextboxId = "userid";
+        private const string passwordTextboxId = "password";
+        private const string submitId = "btnSignon";
+
+        public Browser Browser { get; set; }
+
+        public void GoTo(int attempt = 0)
+        {
+            Browser.GoTo(Pages.HomePageUrl);
+        }
+
+        public void LoginAs(UserBase user)
+        {
+            Browser.FindById(usernameTextboxId).EnterText(user.UserName);
+            Browser.FindById(passwordTextboxId).EnterText(user.Password);
+            Browser.FindById(submitId).Click();
+        }
+    }
+}
