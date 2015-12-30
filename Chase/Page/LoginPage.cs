@@ -9,17 +9,18 @@ namespace Chase.Page
         private const string passwordTextboxId = "usr_password_home";
         private const string submitId = "Sign in";
 
-        public Browser Browser { get; set; }
+        public IBrowser Browser { get; set; }
+
         public void GoTo(int attempt = 0)
         {
-            Browser.GoTo(Pages.HomePageUrl);
+            Browser.GoToUrl(Pages.HomePageUrl);
         }
 
         public void LoginAs(UserBase user)
         {
-            Browser.FindById(usernameTextboxId).EnterText(user.UserName);
-            Browser.FindById(passwordTextboxId).EnterText(user.Password);
-            Browser.FindByText(submitId).Click();
+            Browser.FinElementById(usernameTextboxId).EnterText(user.UserName);
+            Browser.FinElementById(passwordTextboxId).EnterText(user.Password);
+            Browser.FinElementByLinkText(submitId).Click();
         }
     }
 }

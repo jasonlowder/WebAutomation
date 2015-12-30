@@ -7,7 +7,7 @@ namespace Chase
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ChaseBrowserDriver>().As<IBrowserDriver>();
+            builder.RegisterType<ChaseBrowserDriver>(); //.As<IBrowserDriver>();
         }
     }
 }

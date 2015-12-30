@@ -2,7 +2,7 @@
 {
     public interface IPage
     {
-        Browser Browser { get; set; }
+        IBrowser Browser { get; set; }
         void GoTo(int attempt = 0);
     }
 }

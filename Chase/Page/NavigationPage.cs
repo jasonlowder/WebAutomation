@@ -5,7 +5,7 @@ namespace Chase.Page
 {
     public class NavigationPage : IPage
     {
-        public Browser Browser { get; set; }
+        public IBrowser Browser { get; set; }
         public void GoTo(int attempt = 0)
         {
             throw new System.NotImplementedException();
@@ -14,23 +14,23 @@ namespace Chase.Page
         public void AccountActivity()
         {
             MyAccount();
-            Browser.FindByText("See activity ").Click();
+            Browser.FinElementByLinkText("See activity ").Click();
         }
 
         public void DownloadCenter()
         {
             CustomerCenter();
-            Browser.FindByText("Download activity").Click();
+            Browser.FinElementByLinkText("Download activity").Click();
         }
 
         public void CustomerCenter()
         {
-            Browser.FindById("megamenu-CustomerCenter").Click();
+            Browser.FinElementById("megamenu-CustomerCenter").Click();
         }
 
         public void MyAccount()
         {
-            Browser.FindById("megamenu-MyAccounts").Click();
+            Browser.FinElementById("megamenu-MyAccounts").Click();
         }
     }
 }

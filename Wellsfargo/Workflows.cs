@@ -31,7 +31,7 @@ namespace Wellsfargo
 
         public static void Cleanup()
         {
-            Browser.Instance.Cleanup();
+            //Browser.Instance.Cleanup();
         }
     }
 }

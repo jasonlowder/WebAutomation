@@ -5,7 +5,7 @@ namespace Wellsfargo.Page
 {
     public class NavigationPage : IPage
     {
-        public Browser Browser { get; set; }
+        public IBrowser Browser { get; set; }
 
         public void GoTo(int attempt = 0)
         {
@@ -14,13 +14,13 @@ namespace Wellsfargo.Page
 
         public void AccountActivity()
         {
-            Browser.FindByText("Account Activity").Click();
+            Browser.FinElementByLinkText("Account Activity").Click();
         }
 
         public void DownloadCenter()
         {
             AccountActivity();
-            Browser.FindByText("Download Account Activity").Click();
+            Browser.FinElementByLinkText("Download Account Activity").Click();
         }
     }
 }

@@ -5,7 +5,7 @@ using WebAutomationFramework.Interfaces;
 
 namespace Chase
 {
-    public class ChaseBrowserDriver : IBrowserDriver
+    public class ChaseBrowserDriver //: IBrowserDriver
     {
 
         public IWebDriver Driver { get; private set; }

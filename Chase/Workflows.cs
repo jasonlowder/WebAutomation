@@ -31,7 +31,7 @@ namespace Chase
 
         public static void Cleanup()
         {
-            Browser.Instance.Cleanup();
+            //Browser.Instance.Cleanup();
         }
     }
 }

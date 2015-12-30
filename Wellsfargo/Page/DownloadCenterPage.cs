@@ -6,7 +6,7 @@ namespace Wellsfargo.Page
 {
     public class DownloadCenterPage : IPage
     {
-        public Browser Browser { get; set; }
+        public IBrowser Browser { get; set; }
 
         public void GoTo(int attempt = 0)
         {
@@ -15,10 +15,10 @@ namespace Wellsfargo.Page
 
         public void Download()
         {
-            Browser.FindById("fromDate").EnterText(DateTime.Now.AddDays(-1).ToString("MM/dd/yy"));
-            Browser.FindById("toDate").EnterText(DateTime.Now.ToString("MM/dd/yy"));
-            Browser.FindById("quickenOFX").Click();
-            Browser.FindByName("Download").Click();
+            Browser.FinElementById("fromDate").EnterText(DateTime.Now.AddDays(-1).ToString("MM/dd/yy"));
+            Browser.FinElementById("toDate").EnterText(DateTime.Now.ToString("MM/dd/yy"));
+            Browser.FinElementById("quickenOFX").Click();
+            Browser.FinElementByName("Download").Click();
         }
     }
 }

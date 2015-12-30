@@ -47,10 +47,10 @@ namespace WebAutomationFramework.Factories
         {
             return new PhantomJSDriver();
         }
-        public static IWebDriver RemoteWebDriver()
-        {
-            return new RemoteWebDriver();
-        }
+        //public static IWebDriver RemoteWebDriver()
+        //{
+        //    return new RemoteWebDriver();
+        //}
         public static IWebDriver SafariDriver()
         {
             return new SafariDriver();

@@ -9,18 +9,18 @@ namespace Wellsfargo.Page
         private const string passwordTextboxId = "password";
         private const string submitId = "btnSignon";
 
-        public Browser Browser { get; set; }
+        public IBrowser Browser { get; set; }
 
         public void GoTo(int attempt = 0)
         {
-            Browser.GoTo(Pages.HomePageUrl);
+            Browser.GoToUrl(Pages.HomePageUrl);
         }
 
         public void LoginAs(UserBase user)
         {
-            Browser.FindById(usernameTextboxId).EnterText(user.UserName);
-            Browser.FindById(passwordTextboxId).EnterText(user.Password);
-            Browser.FindById(submitId).Click();
+            Browser.FinElementById(usernameTextboxId).EnterText(user.UserName);
+            Browser.FinElementById(passwordTextboxId).EnterText(user.Password);
+            Browser.FinElementById(submitId).Click();
         }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAutomationTests", "WebAu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chase", "Chase\Chase.csproj", "{CC02B616-B33A-4A77-A3FF-543BC3209039}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAutomation.Console", "WebAutomation.Console\WebAutomation.Console.csproj", "{ECD186C5-3DBC-4CE2-9FD6-2123629ED041}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CC02B616-B33A-4A77-A3FF-543BC3209039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC02B616-B33A-4A77-A3FF-543BC3209039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC02B616-B33A-4A77-A3FF-543BC3209039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD186C5-3DBC-4CE2-9FD6-2123629ED041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD186C5-3DBC-4CE2-9FD6-2123629ED041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD186C5-3DBC-4CE2-9FD6-2123629ED041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD186C5-3DBC-4CE2-9FD6-2123629ED041}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
